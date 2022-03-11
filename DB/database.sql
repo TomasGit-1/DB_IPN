@@ -112,7 +112,8 @@ CREATE TABLE PAGOS(
 	FECHA_TERMINO timestamp,
 	facturacion boolean,
 	fechaHoraRegistro timestamp,
-	descripcion varchar 
+	descripcion varchar,
+	FECHA_INICIO_OPCIONAL timestamp
 );
 
 CREATE TABLE INFOADICIONAL(
@@ -127,6 +128,13 @@ CREATE TABLE INFOADICIONAL(
 	recomendacion_telCel varchar
 );
 
+
+CREATE TABLE InicioCursos(
+	idInicioCurso serial primary key,
+	idServiciosEduFK bigint references SERVICIOEDUCATIVO(idServiciosEdu),
+	fecha_inicio timestamp,
+	habilitado boolean
+);
 -- INSERT INTO  SERVICIOEDUCATIVO  (Nombre_Servicio , Habilitado) VALUES 
 -- 								('Curso de Excel' , true),
 -- 								('Curso de Computacion' , true),
