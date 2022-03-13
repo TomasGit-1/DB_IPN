@@ -133,7 +133,7 @@ CREATE TABLE InicioCursos(
 	idInicioCurso serial primary key,
 	idServiciosEduFK bigint references SERVICIOEDUCATIVO(idServiciosEdu),
 	fecha_inicio timestamp,
-	habilitado boolean
+	habilitado_curso boolean
 );
 -- INSERT INTO  SERVICIOEDUCATIVO  (Nombre_Servicio , Habilitado) VALUES 
 -- 								('Curso de Excel' , true),
